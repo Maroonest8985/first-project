@@ -1,5 +1,5 @@
 <template>
-  <div id="navbar-main">
+  <div class="navbar-main">
       <el-aside width="200px" style="background-color: rgb(238, 241, 246)">
         <el-menu :default-openeds="['1', '3']">
           <el-submenu index="1">
@@ -66,8 +66,8 @@ export default {
 </script>
 
 <style>
-.el-aside {
-  position: fixed;
-  min-height: 100%;
+.navbar-main {
+  position: static;
+  width: 200px;
 }
 </style>

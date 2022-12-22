@@ -1,20 +1,17 @@
 <template>
   <div id="app">
-    <TopBar></TopBar>
-    <NavBar></NavBar>
-    <router-view></router-view>
+    <LayoutIndex>
+      <router-view />
+    </LayoutIndex>
   </div>
 </template>
-
 <script>
 
-import NavBar from "@/components/NavBar/NavBar";
-import TopBar from "@/components/TopBar/TopBar";
+import LayoutIndex from "@/layout";
 export default {
   name: 'App',
   components: {
-    TopBar,
-    NavBar
+    LayoutIndex,
   }
 }
 </script>
@@ -26,6 +23,5 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
