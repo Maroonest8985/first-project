@@ -39,6 +39,12 @@ export default {
 
   mounted() {
     console.log('Hello World');
+    this.getData();
+  },
+  methods: {
+    getData(){
+      this.$axios.post('/login', {id : 'asdf', password : 'asdf'})
+    }
   }
 }
 </script>
