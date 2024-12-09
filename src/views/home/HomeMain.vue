@@ -43,12 +43,8 @@ export default {
   },
   methods: {
     getData(){
-      const instance = this.$axios.create({
-        baseURL: 'http://138.2.62.193:8080/',
-        timeout: 1000
-      })
 
-      instance.post('/login', {id : 'asdf', password : 'asdf'}, )
+      this.$axios.post('/login', {id : 'asdf', password : 'asdf'}, )
     }
   }
 }
