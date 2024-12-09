@@ -44,9 +44,8 @@ export default {
   methods: {
     getData(){
       const instance = this.$axios.create({
-        baseURL: 'http://http://138.2.62.193:9091/',
-        timeout: 1000,
-        headers: {'X-Custom-Header': 'foobar'}
+        baseURL: 'http://http://138.2.62.193:8080/',
+        timeout: 1000
       })
 
       instance.post('/login', {id : 'asdf', password : 'asdf'}, )
