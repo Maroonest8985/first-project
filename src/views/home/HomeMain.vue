@@ -44,7 +44,7 @@ export default {
   methods: {
     getData(){
       const instance = this.$axios.create({
-        baseURL: 'http://http://138.2.62.193:8080/',
+        baseURL: 'http://138.2.62.193:8080/',
         timeout: 1000
       })
 
