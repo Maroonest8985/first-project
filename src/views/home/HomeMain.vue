@@ -43,7 +43,12 @@ export default {
   },
   methods: {
     getData(){
-      this.$axios.post(':8080/login', {id : 'asdf', password : 'asdf'})
+      this.$axios.create({
+        baseURL: 'http://http://138.2.62.193:9091/',
+        timeout: 1000,
+        headers: {'X-Custom-Header': 'foobar'}
+      })
+      this.$axios.post('/login', {id : 'asdf', password : 'asdf'}, )
     }
   }
 }
