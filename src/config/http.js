@@ -1,7 +1,9 @@
 import axios from "axios";
 
 const baseURL = axios.create({
-    baseURL: 'http://138.2.62.193:9091'
+    baseURL: process.env.NODE_ENV === 'development' ? '' : process.env.VUE_APP_BASE_API,
 });
 
+
+baseURL.defaults.headers.common['Access-Control-Allow-Origin'] = '*';
 export default baseURL;
