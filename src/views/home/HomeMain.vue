@@ -31,6 +31,8 @@
 </template>
 
 <script>
+import baseURL from "@/config/http";
+
 export default {
   name: 'HelloWorld',
   props: {
@@ -44,7 +46,7 @@ export default {
   methods: {
     getData(){
 
-      this.$axios.post('/login', {id : 'asdf', password : 'asdf'}, ).then(res => {
+      baseURL.post('/login', {id : 'asdf', password : 'asdf'}, ).then(res => {
             console.log(res.data)
       })
     }
