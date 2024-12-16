@@ -44,7 +44,9 @@ export default {
   methods: {
     getData(){
 
-      this.$axios.post('/login', {id : 'asdf', password : 'asdf'}, )
+      this.$axios.post('/login', {id : 'asdf', password : 'asdf'}, ).then(res => {
+            console.log(res.data)
+      })
     }
   }
 }
