@@ -27,6 +27,11 @@
       <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a></li>
       <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
     </ul>
+    <div>
+      <el-alert
+      :title="'hello,' + username"
+      ></el-alert>
+    </div>
   </div>
 </template>
 
@@ -36,20 +41,23 @@ import baseURL from "@/config/http";
 export default {
   name: 'HelloWorld',
   props: {
-    msg: String
+    msg: String,
   },
+  data(){
+    return {
 
+      username: "",
+      password: "",
+    }
+  },
   mounted() {
     console.log('Hello World');
     this.getData();
   },
   methods: {
     getData(){
-      console.log(process.env.NODE_ENV)
-      console.log(process.env.VUE_APP_BASE_API);
-
-      baseURL.post('/login', {id : 'asdf', password : 'asdf'}, ).then(res => {
-            console.log(res.data)
+      baseURL.post('/login', {username : 'asdf', password : 'asdf'}, ).then(res => {
+            this.username= res.data.username;
       })
     }
   }
